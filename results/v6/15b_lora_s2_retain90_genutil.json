@@ -1,0 +1,6 @@
+{
+ "real_authors_logprob": -7.400874738693237,
+ "world_facts_logprob": -8.537709503092318,
+ "tag": "15b_lora_s2_retain90_genutil",
+ "version": "v3"
+}

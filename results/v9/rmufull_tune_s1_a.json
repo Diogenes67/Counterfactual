@@ -1,0 +1,1 @@
+{"tag": "15b_lora_s1_rmufull_a", "stop_reason": "max steps", "config": {"name": "a", "c": 20.0, "alpha": 100.0, "lr": 5e-05, "steps": 300}, "version": "v9"}

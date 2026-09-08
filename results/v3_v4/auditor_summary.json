@@ -1,0 +1,109 @@
+{
+ "control_ranks": [
+  0.6,
+  0.57,
+  0.51,
+  0.43,
+  0.41
+ ],
+ "control_mean": 0.504,
+ "control_sd": 0.08354639429682167,
+ "conditions": {
+  "15b_lora_s0_unlearn_ga": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s0_unlearn_idk": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s0_unlearn_neggrad": {
+   "rank": 0.91,
+   "z": 4.859575370273584
+  },
+  "15b_lora_s0_unlearn_npo": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s1_unlearn_ga": {
+   "rank": 0.16,
+   "z": -4.117472727522445
+  },
+  "15b_lora_s1_unlearn_idk": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s1_unlearn_neggrad": {
+   "rank": 0.92,
+   "z": 4.979269344910865
+  },
+  "15b_lora_s1_unlearn_npo": {
+   "rank": 0.01,
+   "z": -5.912882347081651
+  },
+  "15b_lora_s2_unlearn_ga": {
+   "rank": 0.1,
+   "z": -4.835636575346128
+  },
+  "15b_lora_s2_unlearn_idk": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s2_unlearn_neggrad": {
+   "rank": 0.73,
+   "z": 2.7050838268025363
+  },
+  "15b_lora_s2_unlearn_npo": {
+   "rank": 0.01,
+   "z": -5.912882347081651
+  },
+  "15b_lora_s0_attr_randperturb": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s0_attr_refusal": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s0_attr_unrelated": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s0_attr_utilmatch": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s1_attr_randperturb": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s1_attr_refusal": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s1_attr_unrelated": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s1_attr_utilmatch": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s2_attr_randperturb": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s2_attr_refusal": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s2_attr_unrelated": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  },
+  "15b_lora_s2_attr_utilmatch": {
+   "rank": 0.0,
+   "z": -6.032576321718931
+  }
+ }
+}

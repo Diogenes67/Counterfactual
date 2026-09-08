@@ -1,0 +1,1 @@
+{"full": {"forget_icl": -3.6971865126490595, "retain_icl": -4.254524056911468}, "retain": {"forget_icl": -3.4808702206611635, "retain_icl": -3.7077594488859176}, "unlearn_neggrad": {"forget_icl": -5.125644054412842, "retain_icl": -6.136051545143127}}

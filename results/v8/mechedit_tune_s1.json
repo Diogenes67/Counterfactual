@@ -1,0 +1,1 @@
+{"tag": "mechedit_tune_s1", "log": {"top_layers": [8, 9, 10, 17], "start_forget": -0.21618342250585557, "start_retain": -0.26530371559783816, "stop_reason": "forget target reached"}, "version": "v8"}

@@ -1,0 +1,6 @@
+{
+ "real_authors_logprob": -9.872093665599824,
+ "world_facts_logprob": -13.717500303545568,
+ "tag": "15b_lora_s0_unlearn_neggrad_genutil",
+ "version": "v3"
+}

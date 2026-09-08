@@ -1,0 +1,12 @@
+torch
+transformers
+peft
+accelerate
+datasets
+bitsandbytes
+sentencepiece
+rouge-score
+numpy
+scipy
+scikit-learn
+matplotlib

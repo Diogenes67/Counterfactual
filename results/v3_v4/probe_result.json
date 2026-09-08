@@ -1,0 +1,25 @@
+{
+  "native": {
+    "recall_accuracy": 0.9520833333333333,
+    "forward_asymmetry": 0.9894206549118388,
+    "mean_abs_lag": 1.0483627204030226,
+    "n_transitions": 1985
+  },
+  "imposed": {
+    "forward": {
+      "accuracy": 0.9879166666666667,
+      "accuracy_sd": 0.03693791713432449,
+      "confidence": 0.9259520257326463
+    },
+    "reverse": {
+      "accuracy": 0.96375,
+      "accuracy_sd": 0.05852794916391086,
+      "confidence": 0.89310180686065
+    },
+    "random": {
+      "accuracy": 0.9629166666666666,
+      "accuracy_sd": 0.06316177421686493,
+      "confidence": 0.8897281919257269
+    }
+  }
+}
