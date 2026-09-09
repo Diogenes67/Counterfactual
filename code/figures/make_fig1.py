@@ -72,35 +72,41 @@ fig = plt.figure(figsize=(9.54, 3.45))
 gs = fig.add_gridspec(1, 3, width_ratios=[0.95, 1.35, 1.0], left=0.005, right=0.985,
                       top=0.91, bottom=0.30, wspace=0.32)
 axa, axb, axc = [fig.add_subplot(gs[0, i]) for i in range(3)]
-for ax, lab, dx in [(axa, "a", 0.0), (axb, "b", -0.16), (axc, "c", -0.20)]:
+for ax, lab, dx in [(axb, "b", -0.16), (axc, "c", -0.20)]:
     ax.text(dx, 1.07, lab, transform=ax.transAxes, fontsize=13, fontweight="bold", va="top")
 
 # ------------------------------------------------------------------ a: schematic
+axa.remove()
+axa = fig.add_axes([0.005, 0.30, 0.255, 0.62])
+fig.text(0.008, 0.955, "a", fontsize=13, fontweight="bold", va="top")
 axa.set_xlim(0, 10); axa.set_ylim(0, 10); axa.axis("off")
-def box(x, y, w, h, text, ec, bold=False, lw=1.2):
+def box(x, y, w, h, text, ec, bold=False, lw=1.2, fs=7.4):
     axa.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.02,rounding_size=0.25",
                                  fc="white", ec=ec, lw=lw))
-    axa.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=7.6,
-             fontweight="bold" if bold else "normal")
-box(0.2, 7.4, 4.0, 2.2, "Training data\n(includes forget set)", "#555555")
-box(6.0, 7.4, 3.7, 2.2, "Original\nmodel", C["orig"])
-box(6.0, 3.9, 3.7, 2.2, "Unlearned\nmodel", C["ng"], bold=True)
-axa.add_patch(Ellipse((7.85, 1.2), 3.6, 2.4, fc="#DDF3EA", ec=C["ref"], lw=1.2))
-axa.text(7.85, 1.2, "Retrained\nreference\ndistribution", ha="center", va="center", fontsize=7.6)
-box(0.2, 0.1, 4.0, 2.2, "Training data\nwithout forget set", "#555555")
+    axa.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=fs,
+             fontweight="bold" if bold else "normal", linespacing=1.15)
+LX, LW = 0.2, 5.0          # left column
+RX, RW = 6.6, 3.3          # right column
+CX = RX + RW / 2
+box(LX, 7.3, LW, 2.0, "Training data\n(includes forget set)", "#555555")
+box(RX, 7.3, RW, 2.0, "Original\nmodel", C["orig"])
+box(RX, 4.1, RW, 2.0, "Unlearned\nmodel", C["ng"], bold=True)
+axa.add_patch(Ellipse((CX, 1.55), RW, 3.1, fc="#DDF3EA", ec=C["ref"], lw=1.2))
+axa.text(CX, 1.55, "Retrained\nreference\ndistribution\n(25 seeds)", ha="center", va="center",
+         fontsize=7.4, linespacing=1.15)
+box(LX, 0.55, LW, 2.0, "Training data\nwithout forget set", "#555555")
 arr = dict(arrowstyle="-|>,head_width=0.25,head_length=0.5", color="#777777", lw=1.1)
-axa.annotate("", (5.95, 8.5), (4.25, 8.5), arrowprops=arr)
-axa.text(5.1, 8.75, "train", ha="center", fontsize=6.8, style="italic", color="#666666")
-axa.annotate("", (7.85, 6.15), (7.85, 7.35), arrowprops=arr)
-axa.text(8.05, 6.7, "unlearning", ha="left", fontsize=6.6, style="italic", color="#666666")
-axa.annotate("", (5.95, 1.2), (4.25, 1.2), arrowprops=arr)
-axa.text(5.1, 1.5, "retrain,\n25 seeds", ha="center", va="bottom", fontsize=6.2, style="italic",
-         color="#666666", linespacing=1.0)
-axa.annotate("", (7.85, 2.45), (7.85, 3.85),
+axa.annotate("", (RX - 0.05, 8.3), (LX + LW + 0.05, 8.3), arrowprops=arr)
+axa.text((LX + LW + RX) / 2, 8.6, "train", ha="center", va="bottom", fontsize=6.2, style="italic", color="#666666")
+axa.annotate("", (CX, 6.15), (CX, 7.25), arrowprops=arr)
+axa.text(CX - 0.25, 6.7, "unlearning", ha="right", va="center", fontsize=6.8, style="italic", color="#666666")
+axa.annotate("", (RX - 0.05, 1.55), (LX + LW + 0.05, 1.55), arrowprops=arr)
+axa.text((LX + LW + RX) / 2, 1.85, "retrain", ha="center", va="bottom", fontsize=6.2, style="italic", color="#666666")
+axa.annotate("", (CX, 3.15), (CX, 4.05),
              arrowprops=dict(arrowstyle="<|-|>,head_width=0.25,head_length=0.5", color="black",
                              lw=1.2, linestyle=(0, (3, 2))))
-axa.text(5.7, 3.15, "counterfactual test:\nsame distribution?", ha="right", va="center",
-         fontsize=6.8, style="italic")
+axa.text(CX - 0.45, 3.6, "counterfactual test:\nsame distribution?", ha="right", va="center",
+         fontsize=6.8, style="italic", linespacing=1.1)
 
 # ------------------------------------------------------------------ b: state space
 ax = axb
