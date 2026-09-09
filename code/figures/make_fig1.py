@@ -157,7 +157,7 @@ for rows, marker, size in [(d7, "o", 52), (dfull, "D", 44)]:
     ax.scatter(xs, ys, s=size, marker=marker, facecolors="white", edgecolors="#222222",
                linewidths=1.1, zorder=6)
 ax.axvline(2.5, color="#BBBBBB", lw=0.8, ls=(0, (1.5, 2)), zorder=1)
-ax.text(1.0, 5.02, "registered", ha="center", fontsize=8, color="#777777")
+ax.text(1.0, 5.02, "prespecified", ha="center", fontsize=8, color="#777777")
 ax.text(4.9, 5.02, "exploratory", ha="center", fontsize=8, color="#777777")
 ax.set_xticks(x); ax.set_xticklabels(CHANNELS, rotation=35, ha="right", rotation_mode="anchor")
 ax.set_ylim(-0.15, 5.35); ax.set_yticks(range(0, 6))
