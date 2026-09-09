@@ -202,7 +202,7 @@ def stage_oracleicl(data, seed):
         print("exists, skipping", tag)
         return
     full = data["full"]
-    demos = full[100:105]  # solved forget items outside the scored 100, as in the v5 probe
+    demos = full[100:105]  # NOTE: rows 100-104 of the FULL TOFU split are retain-set items (forget10 = rows 3600-3999); the manuscript reports this probe as five solved retain-set demonstrations
     def icl_score(adir):
         model, tok = load_model(MODEL_15, adapter_dir=adir)
         shots = "\n\n".join(f"Q: {d['question']}\nA: {d['answer']}" for d in demos)
